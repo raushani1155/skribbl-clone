@@ -1,0 +1,12 @@
+{
+  "name": "skribbl-clone",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm install --include=dev --prefix server && npm install --include=dev --prefix client",
+    "build": "npm run install:all && npm run build --prefix client && npm run build --prefix server",
+    "start": "node server/dist/index.js",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client"
+  }
+}
